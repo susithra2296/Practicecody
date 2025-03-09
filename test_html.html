@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML with Attributes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1 id="main-title">Welcome to My Website</h1>
+  <nav>
+    <ul>
+      <li><a href="home.html" title="Go to Home">Home</a></li>
+      <li><a href="about.html" title="Learn more About Us">About</a></li>
+      <li><a href="contact.html" title="Contact Us" target="_blank">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="introduction">
+    <h2 class="section-title">Introduction</h2>
+    <p>This is a sample website to demonstrate HTML attributes.</p>
+    <img src="image.jpg" alt="A descriptive image" width="300" height="200">
+  </section>
+
+  <section class="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <figure>
+      <img src="gallery1.jpg" alt="Gallery Image 1" loading="lazy">
+      <figcaption>Gallery Image 1</figcaption>
+    </figure>
+    <figure>
+      <img src="gallery2.jpg" alt="Gallery Image 2" loading="lazy">
+      <figcaption>Gallery Image 2</figcaption>
+    </figure>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 My Website</p>
+  <a href="privacy.html" rel="noopener">Privacy Policy</a>
+</footer>
+
+<script>
+// Fetching the title of the main header
+const mainTitle = document.querySelector('#main-title').textContent;
+console.log('Main Title:', mainTitle);
+
+// Fetching the alt text of the first image in the gallery
+const firstImageAlt = document.querySelector('.gallery img').alt;
+console.log('First Image Alt Text:', firstImageAlt);
+
+// Fetching all anchor tags (links) and their titles
+const links = document.querySelectorAll('a');
+links.forEach(link => {
+  console.log(`Link: ${link.textContent}, Title: ${link.getAttribute('title')}`);
+});
+
+// Fetching the copyright text in the footer
+const copyrightText = document.querySelector('footer p').textContent;
+console.log('Copyright Text:', copyrightText);
+</script>
+
+</body>
+</html>
